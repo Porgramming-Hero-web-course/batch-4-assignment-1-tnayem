@@ -11,3 +11,21 @@ function myValue(value: string | number) {
 myValue("Hello World"); // Valid
 myValue(10); // Valid
 myValue(true); // Error
+
+Intersection Types (&):
+An intersection type combines multiple types into one, requiring a value to satisfy all types simultaneously. It is defined using the (&) symbol.
+
+Example: 
+
+type Person = { name: string };
+type Employee = { employeeId: number };
+
+type EmployeePerson = Person & Employee;
+
+const emp: EmployeePerson = {
+    name: "Nayem",
+    employeeId: 12345
+};
+
+
+Union types are essential for handling multiple potential types and enabling polymorphic behavior. Intersection types are invaluable for composing and enforcing strict type constraints. Both contribute to making TypeScript a versatile language for strongly-typed programming.
